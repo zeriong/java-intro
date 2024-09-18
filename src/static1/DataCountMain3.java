@@ -34,5 +34,15 @@ public class DataCountMain3 {
         // -> static count로 연결
         // -> instance.count === static count
         // -> static count 반환
+
+        // 결론:
+        // 둘 다 가능하지만 결과적으로 인지에 대한 요소가 중요하기 때문이다.
+        // static 변수의 경우 Class 자체가 가진 변수로서 인지하기 좋은 방식은
+        // 결국 Data3.count 이다.
+        //
+        // 그 이유는 만약 위처럼 instance에서 접근하게 된다면
+        // 자칫 잘못하면 static 변수가 아닌 instance가 가진 변수로
+        // 오해할 수 있기 때문에, 오해의 소지 자체를 만들지 않도록
+        // Data3.count 로서 활용하는 것이 좋다.
     }
 }
