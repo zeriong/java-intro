@@ -24,6 +24,9 @@ public class DataCountMain3 {
         // 이미 static변수가 있는 경우 접근 경로가 instance -> static 으로 넘겨주게되어
         // 결국 같은 static변수로 접근하게 되는 것
 
+        // *중요:  인스턴스로 접근은 했지만,
+        //        인스턴스가 가지는 값 X, static이 가진 값 O
+
         // 로직 순서
         // Instance instance = new Instance()
         // -> instance.count 인스턴스의 count 변수로 접근
