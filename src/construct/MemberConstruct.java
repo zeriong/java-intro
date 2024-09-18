@@ -9,9 +9,14 @@ public class MemberConstruct {
     // 모두 같아도 매개변수가 다르다면, 전달 받는 매개변수에 따라 다른 기능을 수행할 수 있다.
     // 즉, 여러 유형에 대응 가능하도록 클래스를 구성할 수 있다는 뜻
     MemberConstruct(String name, int age) {
-        this.name = name;
-        this.age = age;
-        this.grade = 45;
+        // 생성자 내부에서 this를 활용해서 코드를 최적화할 수 있다.
+        this(name, age, 45);
+
+        // 위 this()를 통해 아래 코드와 동일한 기능이 적용된다.
+        // this.name = name;
+        // this.age = age;
+        // this.grade = 45;
+
         System.out.println("case 1 : grade를 넘겨받지 않은 생성자 매서드 호출");
         System.out.println("name : " + this.name + "\n");
     }
