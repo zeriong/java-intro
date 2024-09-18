@@ -15,5 +15,21 @@ public class DataCountMain3 {
 
         Data3 data3 = new Data3("C");
         System.out.println("C count=" + Data3.count);
+
+        // 하지만 Instance를 통해서도 접근이 가능하다
+        Data3 data4 = new Data3("D");
+        System.out.println("D count=" + data4.count);
+
+        // 로직을 보자면 먼저 instance가 생성된 후 인스턴스의 count로 접근을 시도할 때
+        // 이미 static변수가 있는 경우 접근 경로가 instance -> static 으로 넘겨주게되어
+        // 결국 같은 static변수로 접근하게 되는 것
+
+        // 로직 순서
+        // Instance instance = new Instance()
+        // -> instance.count 인스턴스의 count 변수로 접근
+        // -> instance내부 static한 count 발견
+        // -> static count로 연결
+        // -> instance.count === static count
+        // -> static count 반환
     }
 }
