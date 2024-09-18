@@ -9,6 +9,10 @@ public class MemberConstruct {
     // 모두 같아도 매개변수가 다르다면, 전달 받는 매개변수에 따라 다른 기능을 수행할 수 있다.
     // 즉, 여러 유형에 대응 가능하도록 클래스를 구성할 수 있다는 뜻
     MemberConstruct(String name, int age) {
+        // 생성자 내부 this의 규칙으로 this 이전에 다른 코드가 실행되면 컴파일 에러가 발생한다.
+        // 때문에 this를 활용한 코드 작성이 끝난 후 로직을 추가해야 함
+        // System.out.println("Hello");
+
         // 생성자 내부에서 this를 활용해서 코드를 최적화할 수 있다.
         this(name, age, 45);
 
